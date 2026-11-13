@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>NOIRÉ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ann" id="ann"></div>
+    <header>
+        <nav class="nav">
+            <div class="links">
+                <a href="#home" data-h="home">Home</a>
+                <a href="#catalog" data-h="catalog">Catalog</a>
+                <a href="#contact" data-h="contact">Contact</a>
+            </div>
+            <a class="logo" href="#home">NOIRÉ</a>
+            <div class="icons">
+                <button class="ib" aria-label="Search" onclick="tg()">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+                </button>
+                <button class="ib" aria-label="My details" onclick="od('acc')">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                </button>
+                <button class="ib" aria-label="Bag" onclick="od('cart')">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+                    <span class="badge" id="bd">0</span>
+                </button>
+            </div>
+        </nav>
+        <div class="sb" id="sb">
+            <input id="q" placeholder="Search products…" aria-label="Search products" oninput="srch(this.value)">
+        </div>
+    </header>
+    <main id="app"></main>
+    <footer>
+        <div class="w fl">
+            <a class="logo" href="#home" style="font-size:18px">NOIRÉ</a>
+            <div>
+                <a href="#policies">Policies</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <span class="mut">© 2026 NOIRÉ</span>
+        </div>
+    </footer>
+    <div class="ov" id="ov" onclick="cd()"></div>
+    <aside class="dr" id="cart" aria-label="Your bag">
+        <div class="dh">
+            <span>Your bag</span>
+            <button class="ib" aria-label="Close" onclick="cd()">✕</button>
+        </div>
+        <div class="cl" id="cl"></div>
+        <div class="df">
+            <div class="row"><span>Subtotal</span><span id="st"></span></div>
+            <div class="row"><span>Shipping</span><span id="sh"></span></div>
+            <div class="row"><b>Total</b><b id="tt"></b></div>
+            <p class="mut">Payment is cash on delivery. We confirm your order on WhatsApp.</p>
+            <a id="wl" class="btn s" target="_blank" rel="noopener">Order via WhatsApp</a>
+        </div>
+    </aside>
+    <aside class="dr" id="acc" aria-label="My details">
+        <div class="dh">
+            <span>My details</span>
+            <button class="ib" aria-label="Close" onclick="cd()">✕</button>
+        </div>
+        <div class="cl" style="padding-top:18px">
+            <p class="mut" style="margin-bottom:14px">Save your details once and we add them to your WhatsApp order. They stay on this device only.</p>
+            <input class="in" id="un" placeholder="Full name" aria-label="Full name">
+            <input class="in" id="up" placeholder="Phone number" aria-label="Phone number">
+            <input class="in" id="ua" placeholder="Delivery address" aria-label="Delivery address">
+        </div>
+        <button class="btn s" onclick="saveU()">Save details</button>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
